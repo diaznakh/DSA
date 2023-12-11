@@ -48,6 +48,26 @@ int main()
                 break;
             }
         }
-        cout << endl;
     }
+    else
+    {
+        cout << "Binary of +ve no "<<n<<" is: ";
+        int arr[32];
+        for (int k = 0; k < 32; k++)
+        {
+            arr[k] = 0;
+        }
+        int i = 31;
+        while (n != 0 || i != -(1))
+        {
+            arr[i] = n & 1;
+            n = n >> 1;
+            i--;
+        }
+        for (int l = 0; l < 32; l++)
+        {
+            cout << arr[l];
+        }
+    }
+    cout << endl;
 }
